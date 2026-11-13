@@ -1,36 +1,68 @@
 # 💰 Personal Expense Tracker
 
-A Python and MySQL-based application designed to manage personal finances efficiently. It allows users to record income and expenses, track transactions, calculate balances, and generate monthly financial summaries.
+A desktop-based Personal Expense Tracker developed using **Python, CustomTkinter, and MySQL**. This application helps users manage their personal finances by tracking income, expenses, monitoring balances, and generating monthly financial reports.
+
+The application features a modern graphical user interface (GUI), interactive charts, and CSV export functionality.
 
 ## 🚀 Features
 
-- **Add Income:** Record income with amount, category, description, and date.
-- **Add Expense:** Track daily expenses.
-- **View Transactions:** Display all recorded transactions.
-- **Search Transactions:** Find transactions using their ID.
-- **Update Transactions:** Modify existing transaction details.
-- **Delete Transactions:** Remove unwanted records.
-- **View Balance:** Calculate total income, total expenses, and current balance.
-- **Monthly Summary:** Generate income and expense summaries for a selected month.
-- **Input Validation:** Prevent invalid amounts and dates.
+### 📊 Dashboard
+- View total income.
+- View total expenses.
+- Calculate current balance.
+- Refresh financial information.
+
+### 💵 Transaction Management
+- Add income and expenses.
+- View all transactions.
+- Search transactions by category or description.
+- Edit existing transactions.
+- Delete transactions.
+
+### 📈 Financial Analytics
+- Visualize expenses by category using pie charts.
+- Compare monthly income and expenses using bar charts.
+- Generate monthly financial summaries.
+- View category-wise spending analysis.
+
+### 📁 Data Export
+- Export transaction history to CSV.
+- Open exported records using Microsoft Excel or other spreadsheet applications.
+
+### 🛡️ Input Validation
+- Validate transaction amounts.
+- Validate date formats.
+- Handle invalid inputs and database errors.
 
 ## 🛠️ Technologies Used
 
-- Python 3
-- MySQL
-- MySQL Connector for Python
-- VS Code
+| Technology | Purpose |
+|---|---|
+| Python | Application logic |
+| CustomTkinter | Modern desktop GUI |
+| Tkinter | GUI components |
+| MySQL | Database management |
+| MySQL Connector | Database connectivity |
+| Matplotlib | Charts and visual analytics |
+| CSV | Export transaction records |
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 Personal-Expense-Tracker/
 │
 ├── main.py
 ├── database.py
+├── gui.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+│
+└── screenshots/
+    ├── dashboard.png
+    ├── transactions.png
+    ├── analytics.png
+    └── monthly-report.png
 ```
 
 ## ⚙️ Installation and Setup
@@ -38,7 +70,7 @@ Personal-Expense-Tracker/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/amrutha232006/Personal-Expense-Tracker
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
 ### 2. Navigate to the Project Folder
@@ -55,14 +87,15 @@ pip install -r requirements.txt
 
 ### 4. Configure MySQL
 
-- Start MySQL using XAMPP.
-- Update the database credentials in `database.py` if necessary.
-- The application automatically creates the `expense_tracker` database and `transactions` table.
+- Install and start XAMPP.
+- Start the MySQL service.
+- Configure your MySQL credentials in `database.py`.
+- The application uses the `expense_tracker` database and `transactions` table.
 
 ### 5. Run the Application
 
 ```bash
-python main.py
+python gui.py
 ```
 
 ## 🗄️ Database Structure
@@ -77,31 +110,54 @@ python main.py
 | type | VARCHAR(20) | Income or Expense |
 | amount | DECIMAL(10,2) | Transaction amount |
 | category | VARCHAR(50) | Transaction category |
-| description | VARCHAR(255) | Transaction details |
+| description | VARCHAR(255) | Transaction description |
 | transaction_date | DATE | Transaction date |
+
+## 📸 Application Screenshots
+
+Add your application screenshots to the `screenshots` folder and display them here.
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Transaction History
+
+![Transaction History](screenshots/transactions.png)
+
+### Financial Analytics
+
+![Financial Analytics](screenshots/analytics.png)
+
+### Monthly Report
+
+![Monthly Report](screenshots/monthly-report.png)
 
 ## 📚 Learning Outcomes
 
-Through this project, I practiced:
+Through this project, I gained practical experience in:
 
-- Python functions and modular programming
-- Python and MySQL connectivity
-- CRUD operations
-- SQL queries and aggregate functions
-- Exception handling
-- Input validation
-- Git and GitHub
+- Python programming and modular development.
+- Building desktop applications using CustomTkinter.
+- Connecting Python applications with MySQL.
+- Implementing CRUD operations.
+- Writing SQL queries and aggregate functions.
+- Creating charts using Matplotlib.
+- Exporting data using CSV.
+- Exception handling and input validation.
+- Managing projects using Git and GitHub.
 
-## 🔮 Future Improvements
+## 🔮 Future Enhancements
 
-- Graphical User Interface (GUI)
-- Expense visualization using charts
-- Category-wise expense analysis
-- Export monthly reports to CSV or PDF
-- User login and authentication
+- User registration and login authentication.
+- Password protection and individual user accounts.
+- Budget planning and spending limits.
+- PDF report generation.
+- Advanced financial analytics.
+- Improved dashboard customization.
 
 ## 👩‍💻 Author
 
-Developed as a hands-on project to strengthen Python programming and database management skills.
+Developed as a hands-on project to improve my Python programming, database management, and desktop application development skills.
 
-**If you find this project useful, feel free to explore the repository!** ⭐
+**If you find this project useful, feel free to explore the repository and give it a ⭐!**
